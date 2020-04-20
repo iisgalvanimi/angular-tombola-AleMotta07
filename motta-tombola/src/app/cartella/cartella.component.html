@@ -11,20 +11,19 @@
     <title></title>
   </head>
   <body>
-    <h1 align= "center"> Tombola di Motta </h1>
-    <div align= "center">
-        <p><font color="blue"><strong>Sono AppComponent</strong></font></p>
-        <form>
-         <div class= "form-group">
-             <label><h3>Dimmi un numero</h3></label><br>
-            <label id= "visuaNumero"> Numero casuale </label>
-         </div>
-             <button id= "bottone" type="submit" class="btn btn-warning" (click)="generaNumero()">Estrai</button>
-        </form>
-        <app-cartella [numeriEstratti]="numeriUsciti" [ultimoNumero]="ultimoNumero"></app-cartella>
-    </div>
+  <div align="center">
+      <p>Sono il componente cartella</p>
+      <form>
+					<div class="form-group">
+            <p>Ultimo numero estratto</p>
+						<label><h3>{{ultimoNumero}}</h3></label>
+            <p>Lista numeri estratti</p>
+            <label *ngFor="let numero of numeriEstratti"><h3>{{numero}} -</h3></label>
+  </div>
+				</form>
+			</div>
 
-
+    <h1></h1>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
